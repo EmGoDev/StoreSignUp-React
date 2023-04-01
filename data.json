@@ -1,0 +1,20 @@
+[
+	{
+		"NomeDaLoja": "WILL REVENGE MY DOGGIE",
+		"Responsavel": "John Wick",
+		"EndereçoSEP": "66974-012",
+		"Telefone": "123456789"
+	},
+	{
+		"NomeDaLoja": "TERMINATOR",
+		"Responsavel": "Arnold Schwarzenegger",
+		"EndereçoSEP": "66974-012",
+		"Telefone": "123456789"
+	},
+	{
+		"NomeDaLoja": "AM BLUE",
+		"Responsavel": "Eiffel 65",
+		"EndereçoSEP": "66974-012",
+		"Telefone": "123456789"
+	}
+]
