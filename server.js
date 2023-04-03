@@ -29,14 +29,14 @@ app.post("/api/clients", (req, res) => {
 			console.log("EMPEZANDO A PUSHEAR, los datos son:")
 			console.log(clientData[i].NomeDaLoja)
 			console.log(clientData[i].Responsavel)
-			console.log(clientData[i].EndereçoCEP)
+			console.log(clientData[i].EnderecoCEP)
 			console.log(clientData[i].Telefone)
 
 			// to finally save it into mongoRecords variable
 			mongoRecords.push({
 				NomeDaLoja: clientData[i].NomeDaLoja,
-				Resposnsavel: clientData[i].Responsavel,
-				EndereçoCEP: clientData[i].EndereçoCEP,
+				Responsavel: clientData[i].Responsavel,
+				EnderecoCEP: clientData[i].EnderecoCEP,
 				Telefone: clientData[i].Telefone,
 			});
 	}
@@ -68,6 +68,14 @@ app.post("/api/clients", (req, res) => {
 app.get("/", (req, res) => {
 	res.send("Seems like Express runs jut fine!");
 });
+
+app.delete("/api/clients",(req, res)=>{
+	clientes
+		.deleteMany({})
+		.catch((err) => {
+			res.status(500).send(err)
+		})
+})
 
 app.listen(port, () => {
 	console.log(`The server is running on http://localhost:${port}`);

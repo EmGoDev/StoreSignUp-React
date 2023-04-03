@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const storeSchema = mongoose.Schema({
 	NomeDaLoja: String,
 	Responsavel: String,
-	EndereçoCEP: Number,
+	EnderecoCEP: String,
 	Telefone: Number,
 });
 

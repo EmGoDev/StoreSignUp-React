@@ -2,19 +2,19 @@
 	{
 		"NomeDaLoja": "WILL REVENGE MY DOGGIE",
 		"Responsavel": "John Wick",
-		"EndereçoSEP": "66974-012",
+		"EnderecoCEP": "66974-012",
 		"Telefone": "123456789"
 	},
 	{
-		"NomeDaLoja": "TERMINATOR",
+		"NomeDaLoja": "I WILL BE BACK",
 		"Responsavel": "Arnold Schwarzenegger",
-		"EndereçoSEP": "66974-012",
+		"EnderecoCEP": "66974-012",
 		"Telefone": "123456789"
 	},
 	{
-		"NomeDaLoja": "AM BLUE",
+		"NomeDaLoja": "AM BLUE ABBA DEE ABBA DAE",
 		"Responsavel": "Eiffel 65",
-		"EndereçoSEP": "66974-012",
+		"EnderecoCEP": "66974-012",
 		"Telefone": "123456789"
 	}
 ]
