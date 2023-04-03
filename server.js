@@ -25,16 +25,20 @@ app.post("/api/clients", (req, res) => {
 	// then this variable iterates the posted client data
 	let mongoRecords = [];
 	for (let i = 0, len = clientData.length; i < len; i++) {
-		(client) => {
-			// searchs in every iteration (client var) and retrieves the data
-			// to finally save it into mongoRecords var
+			// searchs in every iteration of clientData
+			console.log("EMPEZANDO A PUSHEAR, los datos son:")
+			console.log(clientData[i].NomeDaLoja)
+			console.log(clientData[i].Responsavel)
+			console.log(clientData[i].EndereçoCEP)
+			console.log(clientData[i].Telefone)
+
+			// to finally save it into mongoRecords variable
 			mongoRecords.push({
-				NomeDaLoja: client.NomeDaLoja,
-				Resposnsavel: client.Responsavel,
-				EndereçoCEP: client.EndereçoCEP,
-				Telefone: client.Telefone,
+				NomeDaLoja: clientData[i].NomeDaLoja,
+				Resposnsavel: clientData[i].Responsavel,
+				EndereçoCEP: clientData[i].EndereçoCEP,
+				Telefone: clientData[i].Telefone,
 			});
-		};
 	}
 
 	/* THIS CHUNK IS NOT WORKEENG
