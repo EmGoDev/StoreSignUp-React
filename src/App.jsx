@@ -1,35 +1,93 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Formik, Field, Form } from 'formik';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  function onSubmit(values, actions) {
+    console.log('SUBMIT', values);
+  }
+
+  function onBlurCep(ev, setFieldValue) {
+    const { value } = ev.target;
+
+    const cep = value?.replace(/[^0-9]/g, '');
+
+    if (cep?.length !== 8) {
+      return;
+    }
+
+    fetch(`https://viacep.com.br/ws/${cep}/json/`)
+      .then((res) => res.json())
+      .then((data) => {
+        setFieldValue('logradouro', data.logradouro);
+        setFieldValue('bairro', data.bairro);
+        setFieldValue('cidade', data.localidade);
+        setFieldValue('uf', data.uf);
+      });
+  }
 
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Formik
+        onSubmit={onSubmit}
+        validateOnMount
+        initialValues={{
+          cep: '',
+          logradouro: '',
+          numero: '',
+          complemento: '',
+          bairro: '',
+          cidade: '',
+          uf: '',
+        }}
+        render={({ isValid, setFieldValue }) => (
+          <Form>
+            <div className="form-control-group">
+              <label>Nome da Loja</label>
+              <Field name="nomeloja" type="text" onBlur={(ev) => onBlurCep(ev, setFieldValue)} />
+            </div>
+            <div className="form-control-group">
+              <label>Responsável</label>
+              <Field name="responsavel" type="text" onBlur={(ev) => onBlurCep(ev, setFieldValue)} />
+            </div>
+            <div className="form-control-group">
+              <label>Telefone</label>
+              <Field name="telefone" type="text" onBlur={(ev) => onBlurCep(ev, setFieldValue)} />
+            </div>
+            <div className="form-control-group">
+              <label>CEP</label>
+              <Field name="cep" type="text" onBlur={(ev) => onBlurCep(ev, setFieldValue)} />
+            </div>
+            <div className="form-control-group">
+              <label>Logradouro</label>
+              <Field name="logradouro" type="text" />
+            </div>
+            <div className="form-control-group">
+              <label>Número</label>
+              <Field name="numero" type="text" />
+            </div>
+            <div className="form-control-group">
+              <label>Complemento</label>
+              <Field name="complemento" type="text" />
+            </div>
+            <div className="form-control-group">
+              <label>Bairro</label>
+              <Field name="bairro" type="text" />
+            </div>
+            <div className="form-control-group">
+              <label>Cidade</label>
+              <Field name="cidade" type="text" />
+            </div>
+            <div className="form-control-group">
+              <label>Estado</label>
+              <Field name="uf" type="text" />
+            </div>
+            <button type="submit" disabled={!isValid}>Enviar</button>
+          </Form>
+        )}
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
