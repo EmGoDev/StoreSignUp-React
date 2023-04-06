@@ -2,31 +2,34 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4635bcd4-4a1d-4e83-bbe4-9edf40e125d0/dddonaa-6559a67a-2df0-4897-9aa5-5b0c8fac6c56.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ2MzViY2Q0LTRhMWQtNGU4My1iYmU0LTllZGY0MGUxMjVkMFwvZGRkb25hYS02NTU5YTY3YS0yZGYwLTQ4OTctOWFhNS01YjBjOGZhYzZjNTYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eZF8NT_qqRTUkYwdoA5i--6-L5Sb99RhDYgK7PDcl-w");
+	background-size: cover;
+    background-color: #cccccc;
 }
 
 .App form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-    border-radius: 10px;
-    border: 1px solid rgba(0,0,0,0.5);
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    background-color: rgb(30,30,30);
-    padding-top: 20px;
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	background-color: rgba(30, 30, 30, 0.75);
+	padding-top: 20px;
 }
 
 .form-control-group {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	padding: 0 20px;
 }
 
 .App input {
-    width: 260px;
+	width: 260px;
 }
 
 .App button {
-    margin: 20px 0
+	margin: 20px 0;
 }

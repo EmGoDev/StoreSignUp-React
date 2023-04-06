@@ -1,20 +1,38 @@
 [
 	{
-		"NomeDaLoja": "WILL REVENGE MY DOGGIE",
-		"Responsavel": "John Wick",
-		"EnderecoCEP": "66974-012",
-		"Telefone": "123456789"
+		"Company": "FrontendCafé",
+		"Responsavel": "tuvieja",
+		"Telefone": "48999094261",
+		"EnderecoCEP": "88101-010",
+		"Logradouro": "Rua Wanderlei Júnior",
+		"Numero": "186",
+		"Complemento": "Apt 02",
+		"Bairro": "Campinas",
+		"Cidade": "São José",
+		"UF": "SC"
 	},
 	{
-		"NomeDaLoja": "I WILL BE BACK",
-		"Responsavel": "Arnold Schwarzenegger",
-		"EnderecoCEP": "66974-012",
-		"Telefone": "123456789"
+		"Company": "AWAWAWAWAWO",
+		"Responsavel": "tuvieja",
+		"Telefone": "48999094261",
+		"EnderecoCEP": "88101-030",
+		"Logradouro": "Rua Wanderlei Júnior",
+		"Numero": "186",
+		"Complemento": "Apt 02",
+		"Bairro": "Campinas",
+		"Cidade": "São José",
+		"UF": "SC"
 	},
 	{
-		"NomeDaLoja": "AM BLUE ABBA DEE ABBA DAE",
-		"Responsavel": "Eiffel 65",
-		"EnderecoCEP": "66974-012",
-		"Telefone": "123456789"
+		"Company": "WOWOWOWWOA",
+		"Responsavel": "tuvieja",
+		"Telefone": "48999094261",
+		"EnderecoCEP": "88101-040",
+		"Logradouro": "Rua Wanderlei Júnior",
+		"Numero": "186",
+		"Complemento": "Apt 02",
+		"Bairro": "Campinas",
+		"Cidade": "São José",
+		"UF": "SC"
 	}
 ]
