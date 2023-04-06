@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
 
 	function handleSubmit(values, { setSubmitting }) {
+    console.log(JSON.stringify(values))
 
     // Object with the form data
     console.log("the data from the formik forms", values)
@@ -18,12 +19,11 @@ function App() {
 		})
 			.then(response => {response.json()})
 			.then(data => {
-        setResponse(data);
         console.log("FORM DATA:", data);
       })
 			.catch((error) => console.error(error));
 	}
-
+  
 	function onBlurCep(ev, setFieldValue) {
 		const { value } = ev.target;
 
